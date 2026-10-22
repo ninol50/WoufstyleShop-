@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { shopUrl } from "@/lib/config";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
     <footer className="footer" id="contact">
       <div className="container footer-grid">
         <div>
-          <h2>WOUFSTYLE</h2>
+          <div className="footer-logo"><Logo /></div>
           <p>Des sweats pensés pour garder votre petit chien tout près.</p>
         </div>
         <div>
@@ -36,7 +37,7 @@ export default function Footer() {
             Une question sur votre sweat ou votre commande ?{" "}
             <Link href="/contact" style={{ textDecoration: "underline" }}>Contactez notre équipe.</Link>
           </p>
-          <h2 style={{ marginTop: 24 }}>Des nouvelles de WOUFSTYLE</h2>
+          <h2 style={{ marginTop: 24 }}>Des nouvelles de Woufstyle</h2>
           <form className="newsletter" action={shopUrl("/contact#newsletter")} method="post">
             <input type="hidden" name="form_type" value="customer" />
             <input type="hidden" name="contact[tags]" value="newsletter" />

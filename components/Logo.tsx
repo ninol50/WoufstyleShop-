@@ -1,0 +1,27 @@
+// Logo Woufstyle : un petit chien qui dépasse de la poche avant, et le nom en Fredoka.
+export function LogoMark({ size = 34 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 40 40" aria-hidden="true">
+      <path d="M9.5 15.5 10.5 4.5 18 11.5Z" fill="#b8835a" />
+      <path d="M30.5 15.5 29.5 4.5 22 11.5Z" fill="#b8835a" />
+      <path d="M11.6 13 12.2 7.6 15.8 11Z" fill="#e9a3a0" />
+      <path d="M28.4 13 27.8 7.6 24.2 11Z" fill="#e9a3a0" />
+      <ellipse cx="20" cy="19" rx="10" ry="9.5" fill="#e8c39a" />
+      <ellipse cx="20" cy="22.5" rx="5" ry="3.6" fill="#f6e6d2" />
+      <circle cx="16" cy="17.5" r="1.4" fill="#2a1a12" />
+      <circle cx="24" cy="17.5" r="1.4" fill="#2a1a12" />
+      <ellipse cx="20" cy="21.2" rx="1.8" ry="1.3" fill="#2a1a12" />
+      <path d="M4 27.5Q20 23.5 36 27.5V32a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5Z" fill="var(--brand)" />
+      <path d="M8 30.3Q20 27.3 32 30.3" fill="none" stroke="#fff" strokeOpacity=".55" strokeWidth="1.2" strokeDasharray="2 2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export default function Logo() {
+  return (
+    <span className="logo-lockup">
+      <LogoMark />
+      <span className="logo-word">Woufstyle</span>
+    </span>
+  );
+}

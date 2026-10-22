@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { shopUrl } from "@/lib/config";
 import { BagIcon, MenuIcon, UserIcon } from "./icons";
+import Logo from "./Logo";
 
 const NAV: { href: string; label: string; short?: string }[] = [
   { href: "/", label: "Boutique" },
@@ -35,7 +36,7 @@ export default function Header() {
               ))}
             </nav>
           </div>
-          <Link href="/" className="logo">WOUFSTYLE</Link>
+          <Link href="/" className="logo" aria-label="Woufstyle, accueil"><Logo /></Link>
           <div className="header-right">
             <a className="icon-btn" href={shopUrl("/account")} aria-label="Mon compte"><UserIcon /></a>
             <a className="icon-btn" href={shopUrl("/cart")} aria-label="Panier"><BagIcon /></a>
