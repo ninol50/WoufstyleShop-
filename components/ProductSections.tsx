@@ -35,7 +35,7 @@ export default function ProductSections() {
     <>
       <section className="section dark">
         <div className="container">
-          <Split image={LIFESTYLE_IMAGES.quotidien} alt="Promenade avec un petit chien dans la poche du sweat">
+          <Split image={LIFESTYLE_IMAGES.quotidien} alt="Sweat CuddleCarry édition Noël avec un yorkshire dans la poche">
             <h2 className="section-title">À vos côtés au quotidien</h2>
             <p className="section-lead">
               Glissez votre petit chien dans la poche avant douillette pour partager vos matinées tranquilles et vos
@@ -55,7 +55,7 @@ export default function ProductSections() {
 
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
-          <Split image={LIFESTYLE_IMAGES.moments} alt="Moment câlin avec un chien dans la poche du sweat" reverse>
+          <Split image={LIFESTYLE_IMAGES.moments} alt="Sweat CuddleCarry vert avec un bichon dans la poche" reverse>
             <h2 className="section-title">Des moments tout près</h2>
             <p className="section-lead">
               La poche avant douillette rapproche votre petit chien de vous, pour partager les instants tranquilles
@@ -85,7 +85,7 @@ export default function ProductSections() {
 
       <section className="section">
         <div className="container">
-          <Split image={LIFESTYLE_IMAGES.proches} alt="Sweat CuddleCarry porté à la maison">
+          <Split image={LIFESTYLE_IMAGES.proches} alt="Sweat CuddleCarry rose avec un spitz nain dans la poche">
             <h2 className="section-title">Un sweat pour rester proches</h2>
             <p className="section-lead">
               Pensé pour garder votre petit chien près de vous, ce sweat associe une poche avant douillette à une
@@ -101,7 +101,7 @@ export default function ProductSections() {
             </details>
             <details className="accordion">
               <summary>Tailles et variantes</summary>
-              <p>Disponible en S, M, L et XL, en beige, vert, rose, noir et édition Noël.</p>
+              <p>Disponible en S, M, L et XL, en édition Noël, beige, vert, rose et noir.</p>
             </details>
           </Split>
           <div className="stats" style={{ marginTop: 40 }}>

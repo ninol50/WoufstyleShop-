@@ -26,7 +26,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-media">
-          {hero.image && <img src={hero.image} alt="Sweat CuddleCarry beige avec un chihuahua dans la poche avant" />}
+          {hero.image && <img src={hero.image} alt={`Sweat CuddleCarry ${hero.label} avec un petit chien dans la poche avant`} />}
         </div>
       </section>
 

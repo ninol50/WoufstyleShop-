@@ -19,7 +19,7 @@ export const FAQ: FaqGroup[] = [
       },
       {
         q: "Quels coloris sont proposés pour le CuddleCarry ?",
-        a: "Beige, vert, rose, noir et une édition Noël.",
+        a: "Une édition Noël à motifs flocons et sapins, puis beige, vert, rose et noir.",
       },
       {
         q: "Le sweat convient-il aux journées fraîches ?",

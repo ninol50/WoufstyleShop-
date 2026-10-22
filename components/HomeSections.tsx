@@ -3,7 +3,7 @@ import { COLORS, bundlePrices, formatPrice } from "@/lib/config";
 import { HeartIcon, LeafIcon, PawIcon, ShieldIcon, TruckIcon, ReturnIcon, BoxIcon } from "./icons";
 
 const STEPS = [
-  { n: "1", title: "Choisissez votre coloris", text: "Beige, vert, rose, noir ou édition Noël, du S au XL." },
+  { n: "1", title: "Choisissez votre coloris", text: "Édition Noël, beige, vert, rose ou noir, du S au XL." },
   { n: "2", title: "Glissez votre chien dans la poche", text: "La poche avant douillette le garde blotti contre vous." },
   { n: "3", title: "Sortez ensemble", text: "Balades, café en terrasse ou soirée canapé : il reste près de vous." },
 ];

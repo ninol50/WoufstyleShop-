@@ -9,13 +9,13 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  const beige = COLORS[0];
+  const main = COLORS[0];
   return (
     <>
       <PageHero title="À propos de Woufstyle" lead="Des sweats pensés pour celles et ceux qui ne sortent jamais sans leur petit compagnon." />
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container split">
-          <div className="split-media">{beige.image && <img src={beige.image} alt="Sweat CuddleCarry beige" />}</div>
+          <div className="split-media">{main.image && <img src={main.image} alt={`Sweat CuddleCarry ${main.label}`} />}</div>
           <div className="prose">
             <h2>Notre idée</h2>
             <p>

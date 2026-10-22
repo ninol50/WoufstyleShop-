@@ -16,7 +16,7 @@ export const BUNDLE_DISCOUNT_RATE = 0.1;
 export const SIZES = ["S", "M", "L", "XL"] as const;
 export type Size = (typeof SIZES)[number];
 
-// Photos servies par le site (public/images), agrandies par IA depuis la vidéo.
+// Photos servies par le site (public/images).
 // Le CDN Shopify n'est pas utilisé : il ne sert pas les fichiers tant que la boutique est protégée.
 const IMG = "/images/";
 
@@ -28,13 +28,13 @@ export type Color = {
   image: string | null;
 };
 
+// L'ordre compte : le premier coloris est la photo principale partout (galerie, boutique, accueil).
 export const COLORS: Color[] = [
+  { id: "noel", label: "Noël", swatch: "linear-gradient(135deg, #b3122a 50%, #f3e7dc 50%)", image: `${IMG}cuddlecarry-noel.webp` },
   { id: "beige", label: "Beige", swatch: "#a39a6a", image: `${IMG}cuddlecarry-beige.webp` },
   { id: "vert", label: "Vert", swatch: "#6fbf95", image: `${IMG}cuddlecarry-vert.webp` },
   { id: "rose", label: "Rose", swatch: "#d9788f", image: `${IMG}cuddlecarry-rose.webp` },
   { id: "noir", label: "Noir", swatch: "#1f1f1f", image: `${IMG}cuddlecarry-noir.webp` },
-  // Photo rouge/vert retirée : à remplacer par le nouveau visuel.
-  { id: "noel", label: "Noël", swatch: "#8e1b2c", image: null },
 ];
 
 // IDs numériques des variantes Shopify, par couleur puis taille.
@@ -90,12 +90,12 @@ export const checkoutUrl = (items: { color: string; size: Size }[], bundle = fal
 
 export const shopUrl = (path: string) => `https://${SHOPIFY_DOMAIN}${path}`;
 
-// Visuels lifestyle des sections (les photos rouge/vert ont été retirées).
-// null = la section s'affiche en texte seul, sans trou visuel, jusqu'à ce que la photo soit fournie.
+// Visuels des sections de contenu.
+// null = la section s'affiche en texte seul, sans trou visuel.
 export const LIFESTYLE_IMAGES: Record<"quotidien" | "moments" | "proches" | "sorties", string | null> = {
-  quotidien: null,
-  moments: null,
-  proches: null,
+  quotidien: `${IMG}cuddlecarry-noel.webp`,
+  moments: `${IMG}cuddlecarry-vert.webp`,
+  proches: `${IMG}cuddlecarry-rose.webp`,
   sorties: `${IMG}cuddlecarry-beige.webp`,
 };
 
