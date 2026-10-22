@@ -18,7 +18,7 @@ html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body { margin: 0; overflow-x: hidden; background: var(--bg); color: var(--ink); font-family: var(--font); line-height: 1.5; }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
-button, select, input { font: inherit; color: inherit; }
+button, select, input, textarea { font: inherit; color: inherit; }
 h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; line-height: 1.2; margin: 0; }
 
 .container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 20px; }
@@ -191,13 +191,11 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; line-height: 1.2; margin
 .newsletter button { height: 46px; border-radius: 999px; border: 0; background: #fff; color: var(--wine); padding: 0 18px; cursor: pointer; font-weight: 500; }
 .footer-bottom { margin-top: 36px; padding-top: 18px; border-top: 1px solid #5c252c; font-size: 0.85rem; color: #c9a7ab; }
 
-/* Navigation desktop */
 .nav-desktop { display: none; gap: 22px; margin-left: 8px; }
 .nav-desktop a { text-decoration: none; font-size: 0.95rem; }
 .nav-desktop a:hover { color: var(--brand); }
 @media (min-width: 1000px) { .nav-desktop { display: flex; } .menu-btn { display: none; } }
 
-/* Pages de contenu */
 .page-hero { padding: 48px 0 32px; }
 .page-hero h1 { font-size: clamp(1.9rem, 4.5vw, 2.6rem); margin-bottom: 12px; }
 .prose { max-width: 760px; }
@@ -221,7 +219,6 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; line-height: 1.2; margin
 .form input, .form textarea { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: var(--bg); }
 .form input:focus, .form textarea:focus { outline: 2px solid var(--brand); outline-offset: 1px; }
 
-/* Accueil */
 .trustbar { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .trustbar-inner { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 16px 20px; font-size: 0.92rem; }
 .trustbar-inner span { display: flex; align-items: center; gap: 8px; }
