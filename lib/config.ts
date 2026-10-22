@@ -16,8 +16,9 @@ export const BUNDLE_DISCOUNT_RATE = 0.1;
 export const SIZES = ["S", "M", "L", "XL"] as const;
 export type Size = (typeof SIZES)[number];
 
-// Photos hébergées sur le CDN Shopify (sources dans public/images, agrandies par IA depuis la vidéo).
-const CDN = "https://cdn.shopify.com/s/files/1/0988/9890/3364/files/";
+// Photos servies par le site (public/images), agrandies par IA depuis la vidéo.
+// Le CDN Shopify n'est pas utilisé : il ne sert pas les fichiers tant que la boutique est protégée.
+const IMG = "/images/";
 
 export type Color = {
   id: string;
@@ -28,10 +29,10 @@ export type Color = {
 };
 
 export const COLORS: Color[] = [
-  { id: "beige", label: "Beige", swatch: "#a39a6a", image: `${CDN}cuddlecarry-beige-hd.jpg` },
-  { id: "vert", label: "Vert", swatch: "#6fbf95", image: `${CDN}cuddlecarry-vert-hd.jpg` },
-  { id: "rose", label: "Rose", swatch: "#d9788f", image: `${CDN}cuddlecarry-rose-hd.jpg` },
-  { id: "noir", label: "Noir", swatch: "#1f1f1f", image: `${CDN}cuddlecarry-noir-hd.jpg` },
+  { id: "beige", label: "Beige", swatch: "#a39a6a", image: `${IMG}cuddlecarry-beige.webp` },
+  { id: "vert", label: "Vert", swatch: "#6fbf95", image: `${IMG}cuddlecarry-vert.webp` },
+  { id: "rose", label: "Rose", swatch: "#d9788f", image: `${IMG}cuddlecarry-rose.webp` },
+  { id: "noir", label: "Noir", swatch: "#1f1f1f", image: `${IMG}cuddlecarry-noir.webp` },
   // Photo rouge/vert retirée : à remplacer par le nouveau visuel.
   { id: "noel", label: "Noël", swatch: "#8e1b2c", image: null },
 ];
@@ -95,7 +96,7 @@ export const LIFESTYLE_IMAGES: Record<"quotidien" | "moments" | "proches" | "sor
   quotidien: null,
   moments: null,
   proches: null,
-  sorties: `${CDN}cuddlecarry-beige-hd.jpg`,
+  sorties: `${IMG}cuddlecarry-beige.webp`,
 };
 
 export const REVIEWS = [
