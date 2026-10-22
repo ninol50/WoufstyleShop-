@@ -134,7 +134,7 @@ export default function ProductView() {
                       />
                     ))}
                   </div>
-                  <p className="field-label">Taille <a href="#faq-tailles">Guide des tailles</a></p>
+                  <p className="field-label">Taille <a href="/guide-des-tailles">Guide des tailles</a></p>
                   <div className="sizes">
                     {SIZES.map((s) => (
                       <button key={s} type="button" className="size" aria-pressed={s === size} onClick={() => setSize(s)}>

@@ -1,10 +1,13 @@
 import Link from "next/link";
 import ShopGrid from "@/components/ShopGrid";
 import Reviews from "@/components/Reviews";
-import { PRODUCT, bundlePrices, formatPrice } from "@/lib/config";
+import Faq from "@/components/Faq";
+import { Benefits, BundleBanner, FinalCta, HowItWorks, TrustBar } from "@/components/HomeSections";
+import { COLORS, PRODUCT, bundlePrices, formatPrice } from "@/lib/config";
 
 export default function Home() {
   const { total } = bundlePrices();
+  const hero = COLORS[0];
   return (
     <>
       <section className="container hero">
@@ -18,16 +21,18 @@ export default function Home() {
           <div style={{ display: "grid", gap: 10, maxWidth: 420 }}>
             <Link className="btn" href="/produits/cuddlecarry-hoodie">Découvrir le CuddleCarry</Link>
             <span style={{ color: "var(--muted)", fontSize: "0.95rem" }}>
-              Lot de 2 : {formatPrice(total)} · 10 % de remise appliquée automatiquement
+              Lot de 2 : {formatPrice(total)} · 10 % de remise appliquée automatiquement
             </span>
           </div>
         </div>
         <div className="hero-media">
-          <img src="https://cdn.shopify.com/s/files/1/0988/9890/3364/files/cuddlecarry-beige.jpg" alt="Sweat CuddleCarry beige avec un chihuahua dans la poche avant" />
+          {hero.image && <img src={hero.image} alt="Sweat CuddleCarry beige avec un chihuahua dans la poche avant" />}
         </div>
       </section>
 
-      <section className="section" style={{ paddingTop: 0 }} id="boutique">
+      <TrustBar />
+
+      <section className="section" id="boutique">
         <div className="container">
           <h2 className="section-title">La collection CuddleCarry</h2>
           <p className="section-lead">Choisissez votre coloris et votre taille, le paiement se fait en toute sécurité sur Shopify.</p>
@@ -35,7 +40,12 @@ export default function Home() {
         </div>
       </section>
 
+      <HowItWorks />
+      <BundleBanner />
+      <Benefits />
       <Reviews />
+      <Faq />
+      <FinalCta />
     </>
   );
 }

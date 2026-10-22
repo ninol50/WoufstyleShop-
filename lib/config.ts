@@ -6,7 +6,7 @@ export const SHOPIFY_DOMAIN =
   process.env.NEXT_PUBLIC_SHOPIFY_DOMAIN || "woufstyleshop.myshopify.com";
 
 // Code de réduction optionnel ajouté au lien du lot de 2.
-// Vide par défaut : la remise « 10 % dès 2 sweats » est une réduction automatique Shopify.
+// Vide par défaut : la remise « 10 % dès 2 sweats » est une réduction automatique Shopify.
 export const BUNDLE_DISCOUNT_CODE = process.env.NEXT_PUBLIC_BUNDLE_DISCOUNT_CODE ?? "";
 
 export const CURRENCY = "EUR";
@@ -16,7 +16,7 @@ export const BUNDLE_DISCOUNT_RATE = 0.1;
 export const SIZES = ["S", "M", "L", "XL"] as const;
 export type Size = (typeof SIZES)[number];
 
-// Photos hébergées sur le CDN Shopify (copies sources dans public/images).
+// Photos hébergées sur le CDN Shopify (sources dans public/images, agrandies par IA depuis la vidéo).
 const CDN = "https://cdn.shopify.com/s/files/1/0988/9890/3364/files/";
 
 export type Color = {
@@ -28,10 +28,10 @@ export type Color = {
 };
 
 export const COLORS: Color[] = [
-  { id: "beige", label: "Beige", swatch: "#a39a6a", image: `${CDN}cuddlecarry-beige.jpg` },
-  { id: "vert", label: "Vert", swatch: "#6fbf95", image: `${CDN}cuddlecarry-vert.jpg` },
-  { id: "rose", label: "Rose", swatch: "#d9788f", image: `${CDN}cuddlecarry-rose.jpg` },
-  { id: "noir", label: "Noir", swatch: "#1f1f1f", image: `${CDN}cuddlecarry-noir.jpg` },
+  { id: "beige", label: "Beige", swatch: "#a39a6a", image: `${CDN}cuddlecarry-beige-hd.jpg` },
+  { id: "vert", label: "Vert", swatch: "#6fbf95", image: `${CDN}cuddlecarry-vert-hd.jpg` },
+  { id: "rose", label: "Rose", swatch: "#d9788f", image: `${CDN}cuddlecarry-rose-hd.jpg` },
+  { id: "noir", label: "Noir", swatch: "#1f1f1f", image: `${CDN}cuddlecarry-noir-hd.jpg` },
   // Photo rouge/vert retirée : à remplacer par le nouveau visuel.
   { id: "noel", label: "Noël", swatch: "#8e1b2c", image: null },
 ];
@@ -95,7 +95,7 @@ export const LIFESTYLE_IMAGES: Record<"quotidien" | "moments" | "proches" | "sor
   quotidien: null,
   moments: null,
   proches: null,
-  sorties: `${CDN}cuddlecarry-beige.jpg`,
+  sorties: `${CDN}cuddlecarry-beige-hd.jpg`,
 };
 
 export const REVIEWS = [
@@ -111,3 +111,7 @@ export const STATS = [
   { value: "91 %", label: "ont aimé emmener leur compagnon en promenade" },
   { value: "89 %", label: "ont trouvé la polaire douce et agréable" },
 ];
+
+// Tableau des mesures (cm) du fournisseur. Vide = la page guide affiche les conseils sans tableau.
+// Exemple : { size: "S", chest: "112", length: "70" }
+export const SIZE_CHART: { size: Size; chest: string; length: string }[] = [];

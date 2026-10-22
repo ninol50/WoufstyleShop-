@@ -13,14 +13,17 @@ export default function Footer() {
           <h2>Liens utiles</h2>
           <ul>
             <li><Link href="/">Boutique</Link></li>
-            <li><Link href="/produits/cuddlecarry-hoodie#faq">Questions fréquentes</Link></li>
+            <li><Link href="/produits/cuddlecarry-hoodie">Le sweat CuddleCarry</Link></li>
+            <li><Link href="/guide-des-tailles">Guide des tailles</Link></li>
+            <li><Link href="/faq">Questions fréquentes</Link></li>
+            <li><Link href="/a-propos">À propos</Link></li>
             <li><a href={shopUrl("/account")}>Mon compte</a></li>
           </ul>
         </div>
         <div>
           <h2>Informations</h2>
           <ul>
-            <li><a href={shopUrl("/policies/shipping-policy")}>Livraison</a></li>
+            <li><Link href="/livraison-retours">Livraison et retours</Link></li>
             <li><a href={shopUrl("/policies/refund-policy")}>Retours et remboursements</a></li>
             <li><a href={shopUrl("/policies/terms-of-service")}>Conditions générales de vente</a></li>
             <li><a href={shopUrl("/policies/privacy-policy")}>Confidentialité</a></li>
@@ -31,7 +34,7 @@ export default function Footer() {
           <h2>Une question ?</h2>
           <p>
             Une question sur votre sweat ou votre commande ?{" "}
-            <a href={shopUrl("/pages/contact")} style={{ textDecoration: "underline" }}>Contactez notre équipe.</a>
+            <Link href="/contact" style={{ textDecoration: "underline" }}>Contactez notre équipe.</Link>
           </p>
           <h2 style={{ marginTop: 24 }}>Des nouvelles de WOUFSTYLE</h2>
           <form className="newsletter" action={shopUrl("/contact#newsletter")} method="post">
