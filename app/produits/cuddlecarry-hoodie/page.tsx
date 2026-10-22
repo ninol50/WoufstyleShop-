@@ -7,7 +7,7 @@ import { PRODUCT } from "@/lib/config";
 export const metadata: Metadata = {
   title: PRODUCT.title,
   description: PRODUCT.description,
-  openGraph: { images: ["/images/cuddlecarry-beige.jpg"] },
+  openGraph: { images: ["https://cdn.shopify.com/s/files/1/0988/9890/3364/files/cuddlecarry-beige.jpg"] },
 };
 
 export default function ProductPage() {

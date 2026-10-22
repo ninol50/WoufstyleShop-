@@ -13,7 +13,7 @@ Tout est dans `lib/config.ts` :
 - `VARIANT_IDS` : IDs des variantes Shopify par coloris et taille
 - `COLORS[].image` / `LIFESTYLE_IMAGES` : visuels (`null` = photo à venir)
 
-Pour remplacer une photo : déposer le fichier dans `public/images/` et mettre son chemin dans `lib/config.ts`.
+Pour remplacer une photo : l’ajouter au produit dans Shopify (ou dans `public/images/`) et mettre son URL dans `lib/config.ts`.
 
 ## Dev
 

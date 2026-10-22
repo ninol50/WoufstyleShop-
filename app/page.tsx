@@ -23,7 +23,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-media">
-          <img src="/images/cuddlecarry-beige.jpg" alt="Sweat CuddleCarry beige avec un chihuahua dans la poche avant" />
+          <img src="https://cdn.shopify.com/s/files/1/0988/9890/3364/files/cuddlecarry-beige.jpg" alt="Sweat CuddleCarry beige avec un chihuahua dans la poche avant" />
         </div>
       </section>
 

@@ -16,6 +16,9 @@ export const BUNDLE_DISCOUNT_RATE = 0.1;
 export const SIZES = ["S", "M", "L", "XL"] as const;
 export type Size = (typeof SIZES)[number];
 
+// Photos hébergées sur le CDN Shopify (copies sources dans public/images).
+const CDN = "https://cdn.shopify.com/s/files/1/0988/9890/3364/files/";
+
 export type Color = {
   id: string;
   label: string;
@@ -25,10 +28,10 @@ export type Color = {
 };
 
 export const COLORS: Color[] = [
-  { id: "beige", label: "Beige", swatch: "#a39a6a", image: "/images/cuddlecarry-beige.jpg" },
-  { id: "vert", label: "Vert", swatch: "#6fbf95", image: "/images/cuddlecarry-vert.jpg" },
-  { id: "rose", label: "Rose", swatch: "#d9788f", image: "/images/cuddlecarry-rose.jpg" },
-  { id: "noir", label: "Noir", swatch: "#1f1f1f", image: "/images/cuddlecarry-noir.jpg" },
+  { id: "beige", label: "Beige", swatch: "#a39a6a", image: `${CDN}cuddlecarry-beige.jpg` },
+  { id: "vert", label: "Vert", swatch: "#6fbf95", image: `${CDN}cuddlecarry-vert.jpg` },
+  { id: "rose", label: "Rose", swatch: "#d9788f", image: `${CDN}cuddlecarry-rose.jpg` },
+  { id: "noir", label: "Noir", swatch: "#1f1f1f", image: `${CDN}cuddlecarry-noir.jpg` },
   // Photo rouge/vert retirée : à remplacer par le nouveau visuel.
   { id: "noel", label: "Noël", swatch: "#8e1b2c", image: null },
 ];
@@ -36,11 +39,11 @@ export const COLORS: Color[] = [
 // IDs numériques des variantes Shopify, par couleur puis taille.
 // Format : VARIANT_IDS.beige.S = "60903596360014"
 export const VARIANT_IDS: Record<string, Partial<Record<Size, string>>> = {
-  beige: {},
-  vert: {},
-  rose: {},
-  noir: {},
-  noel: {},
+  beige: { S: "57560333975876", M: "57560334008644", L: "57560334041412", XL: "57560334074180" },
+  vert: { S: "57560334106948", M: "57560334139716", L: "57560334172484", XL: "57560334205252" },
+  rose: { S: "57560334238020", M: "57560334270788", L: "57560334303556", XL: "57560334336324" },
+  noir: { S: "57560334369092", M: "57560334401860", L: "57560334434628", XL: "57560334467396" },
+  noel: { S: "57560334500164", M: "57560334532932", L: "57560334565700", XL: "57560334598468" },
 };
 
 export const PRODUCT = {
@@ -92,7 +95,7 @@ export const LIFESTYLE_IMAGES: Record<"quotidien" | "moments" | "proches" | "sor
   quotidien: null,
   moments: null,
   proches: null,
-  sorties: "/images/cuddlecarry-beige.jpg",
+  sorties: `${CDN}cuddlecarry-beige.jpg`,
 };
 
 export const REVIEWS = [
